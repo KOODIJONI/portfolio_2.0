@@ -1,17 +1,15 @@
-import { ShaderMaterial, UniformsUtils } from 'three';
 import * as THREE from 'three';
-import { validateLocaleAndSetLanguage } from 'typescript';
 
 export const WaveShader = {
-  uniforms: {
+    uniforms: {
     time: { value: 0.0 },
     amplitude: { value: 0.2 },
     frequency: { value: 2.0 },
     speed: { value: 1.0 },
-    color1: { value: [0.2, 0.4, 0.8] },
-    color2: { value: [0.8, 0.2, 0.4] },
+    color1: { value: new THREE.Color(0.2, 0.4, 0.8) }, // ✅ Color object
+    color2: { value: new THREE.Color(0.8, 0.2, 0.4) }, // ✅ Color object
     progress: { value: 0 },
-    deltaTime: { value: 0},
+    deltaTime: { value: 0 },
   },
 
   vertexShader: `

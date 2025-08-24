@@ -15,6 +15,6 @@ export function setupPostProcessing(renderer: THREE.WebGLRenderer, scene: THREE.
     1,
     0.90 
   );
-
+  composer.addPass(bloomPass); 
   return composer;
 }

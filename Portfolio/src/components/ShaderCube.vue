@@ -77,7 +77,7 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted, onBeforeUnmount, watch } from 'vue';
 import * as THREE from 'three';
-import ThreeScene from '../ThreeScene.ts';
+import ThreeScene from '../threeScene.ts';
 import { scenes } from '../sceneConfig';
 
 
@@ -160,34 +160,6 @@ function applyScene(sceneIndex: number) {
   sceneInstance.setYaw(scene.settings.pitch);
   sceneInstance.setScale(scene.settings.scaleX, scene.settings.scaleY, scene.settings.scaleZ);
   sceneInstance.setRotation(scene.settings.rotationX, scene.settings.rotationY, scene.settings.rotationZ);
-}
-function logCurrentSettings() {
-  const sceneStr = `
-{
-  uniforms: {
-    speed: { value: ${sliders.speed} },
-    amplitude: { value: ${sliders.amplitude} },
-    frequency: { value: ${sliders.frequency} },
-    time: { value: 0 },
-    color1: { value: new THREE.Color('${sliders.color1}') },
-    color2: { value: new THREE.Color('${sliders.color2}') }
-  },
-  settings: {
-    fov: ${sliders.fov},
-    yaw: ${sliders.yaw},
-    pitch: ${sliders.pitch},
-    backgroundColor: 0x000000,
-    near: 0.1,
-    far: 1000,
-    scaleX: ${sliders.scaleX},
-    scaleY: ${sliders.scaleY},
-    scaleZ: ${sliders.scaleZ},
-    rotationX: ${sliders.rotationX},
-    rotationY: ${sliders.rotationY},
-    rotationZ: ${sliders.rotationZ}
-  }
-}`;
-  console.log(sceneStr);
 }
 onMounted(() => {
   sceneInstance = new ThreeScene(canvas.value!, uniforms, sceneSettings);

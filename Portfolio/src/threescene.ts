@@ -43,8 +43,7 @@ export default class ThreeScene {
     
     this.uniformTargets.amplitude = uniforms.amplitude.value;
     this.uniformTargets.frequency = uniforms.frequency.value;
-    this.uniformTargets.color1.copy(uniforms.color1.value);
-    this.uniformTargets.color2.copy(uniforms.color2.value);
+  
 
     this.scene = new THREE.Scene();
 
@@ -95,7 +94,7 @@ export default class ThreeScene {
   }
 private progress = 0; // Add this property to the class
 
-private animate(time?: number): void {
+private animate(): void {
   if (!this.isVisible) return;
 
   this.animationId = requestAnimationFrame(this.animate);
@@ -161,7 +160,7 @@ private animate(time?: number): void {
 
 
   // Render
-  this.composer.render(this.scene, this.camera);
+  this.composer.render();
 }
 
 

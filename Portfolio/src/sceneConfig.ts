@@ -2,12 +2,15 @@
 import * as THREE from 'three';
 
 export interface Uniforms {
-  speed: { value: number };
+  time: { value: number };
   amplitude: { value: number };
   frequency: { value: number };
-  time: { value: number };
-  color1: { value: THREE.Color };
-  color2: { value: THREE.Color };
+  speed: { value: number };
+  color1: { value: THREE.Color }; // ← was number[]
+  color2: { value: THREE.Color }; // ← was number[]
+  progress: { value: number };
+  deltaTime: { value: number };
+  
 }
 
 export interface SceneSettings {
@@ -40,7 +43,10 @@ export const scenes: SceneConfig[] = [
     frequency: { value: 4.68 },
     time: { value: 0 },
     color1: { value: new THREE.Color('#3366CC') },
-    color2: { value: new THREE.Color('#CC3366') }
+    color2: { value: new THREE.Color('#CC3366') },
+    progress: { value: 0 },
+  deltaTime: { value: 0 }
+
   },
   settings: {
     fov: 40,
@@ -63,8 +69,10 @@ export const scenes: SceneConfig[] = [
     amplitude: { value: 0.5 },
     frequency: { value: 2 },
     time: { value: 0 },
-color1: { value: new THREE.Color('#a62f1aff') },
-    color2: { value: new THREE.Color('#E68F19') }
+color1: { value: new THREE.Color('#a62f1a') },
+    color2: { value: new THREE.Color('#E68F19') },
+    progress: { value: 0 },
+  deltaTime: { value: 0 }
   },
   settings: {
     fov: 65,
@@ -88,7 +96,9 @@ color1: { value: new THREE.Color('#a62f1aff') },
     frequency: { value: 0.51 },
     time: { value: 0 },
     color1: { value: new THREE.Color('#8050B3') },
-    color2: { value: new THREE.Color('#33CC99') }
+    color2: { value: new THREE.Color('#33CC99') },
+    progress: { value: 0 },
+  deltaTime: { value: 0 }
   },
   settings: {
     fov: 25,
@@ -112,7 +122,9 @@ color1: { value: new THREE.Color('#a62f1aff') },
     frequency: { value: 4.66 },
     time: { value: 0 },
     color1: { value: new THREE.Color('#3366cc') },
-    color2: { value: new THREE.Color('#cc3366') }
+    color2: { value: new THREE.Color('#cc3366') },
+    progress: { value: 0 },
+  deltaTime: { value: 0 }
   },
   settings: {
     fov: 20,
