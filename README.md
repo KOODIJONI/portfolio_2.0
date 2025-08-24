@@ -28,4 +28,4 @@ Henkilökohtainen portfolio-verkkosivu, joka esittelee ohjelmointitaitoni, proje
 
 1. Kloonaa repository:  
 ```bash
-git clone https://github.com/USERNAME/REPO_NAME.git
+git clone https://github.com/KOODIJONI/portfolio_2.0.git
