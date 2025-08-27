@@ -15,10 +15,7 @@ export default {
 
     <div class="content">
       <p class="about-text">
-        Olen Joni Mäyrä, insinööri (AMK) ja tietotekniikan opiskelija OAMK:ssa,
-        erikoistuen laiteläheiseen ohjelmistokehitykseen. Minulla on vahva pohja
-        ohjelmoinnissa ja teknisissä ratkaisuissa, ja kehityn jatkuvasti uusissa
-        teknologioissa.
+        Olen Joni Mäyrä, ohjelmistokehittäjä ja tietotekniikan opiskelija AMK:ssa. Erikoistun laiteläheiseen ohjelmistokehitykseen. Minulla on vahva pohja ohjelmoinnissa ja teknisissä ratkaisuissa, ja kehitän itseäni jatkuvasti uusissa teknologioissa.
       </p>
       <p class="about-text">
         Rakastan luoda moderneja, käyttäjäystävällisiä ja visuaalisesti näyttäviä
