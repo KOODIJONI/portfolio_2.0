@@ -34,6 +34,14 @@ export default {
           image: "/images/AllGuitarScales.png"
         },
         {
+        name: "Convolutional Neural Network for Audio Classification",
+        description: "Koulutin ja toteutin CNN-mallin, joka tunnistaa ääniavainsanoja reaaliajassa. Projekti sisältää oman käyttöliittymän ja mallin tason toteutukset.",
+        tech: ["Python", "NumPy"],
+        link: "https://github.com/KOODIJONI/Convolutional_neural_network_for_audio_classification
+        ",
+        image: "/images/neuralnetwork.png"
+        },
+        {
           name: "RocketBank",
           description: "Pankkijärjestelmäprojekti kurssille: backend, web-frontend ja Qt-sovellus.",
           tech: ["Node.js", "MySQL", "Qt", "JavaScript"],
